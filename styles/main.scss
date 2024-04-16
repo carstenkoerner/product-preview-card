@@ -1,60 +1,5 @@
-@font-face {
-  font-family:'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-display:swap;
-  src: local('Montserrat'), local('Montserrat-Medium'),
-  url(../assets/fonts/montserrat_style-normal_weight-500.woff2) format('woff2'),
-}
-@font-face {
-  font-family:'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display:swap;
-  src: local('Montserrat'), local('Montserrat-Bold'),
-  url(../assets/fonts/montserrat_style-normal_weight-700.woff2) format('woff2'),
-}
-@font-face {
-font-family:'Fraunces';
-font-style: normal;
-font-weight: 700;
-font-display:swap;
-src: local('Fraunces'), local('Fraunces-Bold'),
-url(../assets/fonts/fraunces_style-normal_weight-700.woff2) format('woff2'),
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-}
-body {
-  line-height: 1.2;
-  -webkit-font-smoothing: antialiased;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
+@import "./typography";
+@import "./resets";
 
 /* Primary */
 $clr-dark-cyan: hsl(158, 36%, 37%);
@@ -112,7 +57,7 @@ body {
 }
 
 .card__img-panel {
-  width: 19rem;
+  width: 18.7rem;
   height: 28rem;
 }
 
@@ -124,30 +69,19 @@ body {
   }
 }
 
-.card__img-panel__img-desktop {
-  display: block;
+.card__img-panel__img {
+  overflow: hidden;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   height: 100%;
   width: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 630px) {
-  .card__img-panel__img-desktop {
-    display: none;
-  }
-}
-
-.card__img-panel__img-mobile {
-  display: none;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
-@media (max-width: 630px) {
-  .card__img-panel__img-mobile {
-    display: block;
+  .card__img-panel__img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0rem;
   }
 }
 

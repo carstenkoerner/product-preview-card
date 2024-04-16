@@ -10,8 +10,10 @@
 <body>
   <main class="card">
     <div class="card__img-panel">
-      <img class="card__img-panel__img-desktop" src="./assets/images/image-product-desktop.jpg" alt="Image Gabrielle Essence Eau De Parfum">
-      <img class="card__img-panel__img-mobile" src="./assets/images/image-product-mobile.jpg" alt="Image Gabrielle Essence Eau De Parfum">
+      <picture class="card__img-panel__img">
+        <source media="(min-width: 631px)" srcset="./assets/images/image-product-desktop.jpg">
+        <img src="./assets/images/image-product-mobile.jpg" alt="Image Gabrielle Essence Eau De Parfum">
+      </picture>
     </div>
     <div class="card__text-panel">
       <h2 class="card__text-panel__category">Perfume</h2>
